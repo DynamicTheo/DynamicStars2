@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamicStars Community</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #222;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        #content {
+            padding: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            width: 80%;
+            max-width: 600px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff512f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to DynamicStars Community!</h1>
+    
+    <nav>
+        <a onclick="showPage('about')">About</a>
+        <a onclick="showPage('forum')">Forum</a>
+        <a onclick="showPage('events')">Events</a>
+        <a onclick="showPage('gallery')">Gallery</a>
+        <a onclick="showPage('contact')">Contact</a>
+        <a onclick="showPage('carries')">Carries</a>
+    </nav>
+
+    <div id="content">
+        <div id="about">
+            <h2>About Us</h2>
+            <p>Join the most explosive Brawl Stars community and be part of the action!</p>
+            <img src="https://example.com/community-image.jpg" alt="Community Image">
+        </div>
+
+        <div id="forum" class="hidden">
+            <h2>Forum</h2>
+            <p>Discuss strategies, team up, and chat with other players.</p>
+            <a href="https://discord.gg/pBAGBBEJ" class="button">Join the Forum</a>
+        </div>
+
+        <div id="events" class="hidden">
+            <h2>Upcoming Events</h2>
+            <p>Stay tuned for tournaments, giveaways, and more!</p>
+            <img src="https://example.com/events.jpg" alt="Events Image">
+        </div>
+
+        <div id="gallery" class="hidden">
+            <h2>Gallery</h2>
+            <p>Check out our best moments in Brawl Stars.</p>
+            <img src="https://example.com/gallery1.jpg" alt="Gallery Image">
+            <img src="https://example.com/gallery2.jpg" alt="Gallery Image">
+        </div>
+
+        <div id="contact" class="hidden">
+            <h2>Contact Us</h2>
+            <form action="mailto:dumitrumititelu71@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div id="carries" class="hidden">
+            <h2>Carries</h2>
+            <p>Need help in Brawl Stars? Request a carry!</p>
+            <form action="mailto:dumitrumititelu71@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="brawl-id" placeholder="Your Brawl Stars ID" required>
+                <textarea name="message" placeholder="Why do you need a carry?" rows="5" required></textarea>
+                <button type="submit">Request Carry</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('#content > div');
+            pages.forEach(page => page.classList.add('hidden'));
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
+
